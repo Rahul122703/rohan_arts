@@ -78,6 +78,11 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: myfont;
   color: #dddde6; }
 
+.contact-form {
+  justify-content: center;
+  cn
+}
+
 .btn {
   padding-top: 14px;
   padding-bottom: 14px;

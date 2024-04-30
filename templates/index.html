@@ -4,13 +4,13 @@
   <div class="untree_co-section pb-0" id="home-section">
     <div class="container">
       <div class="row justify-content-center text-center">
-        <div class="col-md-7">
-          <h1 class="heading gsap-reveal-hero mb-3"><strong>Welcome User</strong></h1>
-          <h2 class="subheading gsap-reveal-hero mb-4">
-            Explore the world of artistry through my minimalistic and expressive creations. Dive into a journey of imagination and emotion.
-          </h2>
-          <p class="gsap-reveal-hero">Discover the essence of my artistic vision and craftsmanship.</p>
-        </div>
+          <div class="col-md-7">
+            <h1 class="heading gsap-reveal-hero mb-3"><strong>Welcome User</strong></h1>
+            <h2 class="subheading gsap-reveal-hero mb-4">
+              <b>Explore the world of artistry through my minimalistic and expressive creations. Dive into a journey of imagination and emotion.</b>
+            </h2>
+            <p class="gsap-reveal-hero"><b>Discover the essence of my artistic vision.</b></p>
+          </div>
       </div>
     </div>
   </div>
@@ -53,27 +53,30 @@
         <div class="row justify-content-center mb-3">
           <div class="col-lg-7 mx-auto text-center author-wrap">
             <img src="../static/images/rohan_logo.jpeg" alt="Image" class="img-fluid rounded-circle mb-3" height = "250" width = "250">
-            <h3 class="text-black h5 font-weight-bold mb-2 gsap-reveal-hero">James Williardson</h3>
-            <p class="gsap-reveal-hero">Product Designer and Developer</p>
+            <h3 class="text-black h5 font-weight-bold mb-2 gsap-reveal-hero">ROHAN MEWATI</h3>
+            <Strong><b><p class="gsap-reveal-hero">ARTIST AND PAINTER</p></b></strong>
           </div>
         </div>
 
         <div class="row justify-content-center">
           <div class="col-lg-7">
+            <strong>
+              <b>
+                <p class="gsap-reveal-hero">Greetings,</p>
 
-
-            <p class="gsap-reveal-hero">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-
-            <p class="gsap-reveal-hero">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-
-            <p class="gsap-reveal-hero">Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-
-            <p class="gsap-reveal-hero">The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way.</p>
-
-            <p class="gsap-reveal-hero mb-5">When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-
-
-            <p class="gsap-reveal-hero text-center"><a href="https://untree.co/" target="_blank" class="btn btn-outline-black">Hire Me at Untree.co</a></p>    
+                <p class="gsap-reveal-hero">I am a young artist specializing in sketches, paintings, and portraits. If you are interested in acquiring my work, please feel free to reach out to me through this platform.</p>
+                
+                <p class="gsap-reveal-hero">Far from the hustle and bustle of daily life, my art is inspired by the serene landscapes and tranquil moments of life. Each stroke of my brush or pencil captures the essence of emotion and beauty.</p>
+                
+                <p class="gsap-reveal-hero">I take pride in creating pieces that resonate with individuals on a personal level. Whether you seek a custom portrait or wish to explore my existing collection, I am dedicated to providing you with artwork that speaks to your soul.</p>
+                
+                <p class="gsap-reveal-hero">Feel free to connect with me to discuss your artistic needs and preferences. I look forward to the opportunity to collaborate and create something truly special together.</p>
+                
+                <p class="gsap-reveal-hero">For inquiries about commissions, pricing, or any other questions, don't hesitate to send me a message. Your satisfaction is my priority, and I am committed to exceeding your expectations.</p>
+                
+                <p class="gsap-reveal-hero">Thank you for considering my artistry. I can't wait to embark on this creative journey with you!</p>
+              </b>   
+            </strong>
           </div>
         </div>
       </div>
@@ -366,47 +369,28 @@
 
         <div class="row">
           <div class="col-lg-6">
-            <form action="#">
-              <div class="row">
-                <div class="col-lg-6 form-group">
-                  <input type="text" class="form-control" placeholder="Firstname">
-                </div>
-                <div class="col-lg-6 form-group">
-                  <input type="text" class="form-control" placeholder="Lastname">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12 form-group">
-                  <input type="email" class="form-control" placeholder="Email address">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-lg-12 form-group">
-                  <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Write your message..."></textarea>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 form-group">
-                  <input type="submit" class="btn btn-black" value="Send Message">
-                </div>
-              </div>
+            <form action="{{url_for('contact')}}" method = "POST" class="contact-form">
+              {% if mail_flash %}
+                <p style="color: #008000; /* Green color for success message */
+                font-size: 16px; /* Larger font size */
+                font-weight: bold; /* Bold text */
+                background-color: #e6ffe6; /* Light green background color */
+                padding: 10px; /* Padding around the success message */
+                border-radius: 5px; /* Rounded corners */
+                border: 1px solid #99ff99; /* Border around the success message */
+                margin-bottom: 10px; /* Margin below the success message */">
+                    {{ mail_flash}}
+                </p>
+              {% endif %}
+              {% from "bootstrap5/form.html" import render_form %} 
+              {{ render_form(contact_form) }}
             </form>
-          </div>
-          <div class="col-lg-6">
-            <div id="map">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d320.12856481718734!2d-73.97263090448001!3d40.78263296621774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588ff21eaaab%3A0xd0128d5d89a30429!2sMargarita%20Anthoine!5e0!3m2!1sen!2sph!4v1597149027268!5m2!1sen!2sph"  frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div id="overlayer"></div>
-    <div class="loader">
-      <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
-    </div>
+    
 
 {% include "footer.html" %}
    
