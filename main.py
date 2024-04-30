@@ -66,7 +66,7 @@ def contact():
         body = contact_form.body.data
         send_mail(contact_form.email.data,body)
         return render_template('index.html',mail_flash = mail_flash)
-    mail_flash = "kuch to hai"
+    mail_flash = None
     return render_template('index.html',mail_flash = mail_flash)
 
 if __name__ == '__main__':
