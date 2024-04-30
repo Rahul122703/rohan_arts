@@ -6,9 +6,15 @@
 */
 
 
+@font-face {
+  font-family: myfont;
+  src: url(KOLAK.ttf);
+}
+
+
 
 body {
-  font-family: "PT Mono", monospace;
+  font-family:  myfont;
   line-height: 1.6;
   background: #ffffff;
   overflow-x: hidden;
@@ -69,7 +75,7 @@ a.text-primary {
     color: #0389ff !important; }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
-  font-family: "Montserrat", sans-serif;
+  font-family: myfont;
   color: #dddde6; }
 
 .btn {
@@ -268,7 +274,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
           -webkit-transform: translateY(-50%);
           -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-          font-family: 'icomoon'; }
+          font-family: myfont; }
       .site-nav .site-navigation .site-menu .has-children .dropdown {
         visibility: hidden;
         opacity: 0;
@@ -475,7 +481,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
       .site-mobile-menu .site-nav-wrap .arrow-collapse:before {
         font-size: 14px;
         z-index: 20;
-        font-family: "icomoon";
+        font-family: myfont;
         content: "\e313";
         position: absolute;
         top: 50%;
@@ -629,7 +635,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
     font-size: 40px; }
   .untree_co-section .subheading {
     font-size: 18px;
-    font-family: "PT Mono", monospace; }
+    font-family: myfont; }
 
 .section-heading {
   font-size: 30px;
@@ -1036,7 +1042,7 @@ figure.dotted-bg {
   position: relative;
   padding-left: 40px; }
   .work-experience:before {
-    font-family: 'icomoon';
+    font-family:myfont;
     content: "\e8f7";
     color: #ccc;
     font-size: 20px;
@@ -1349,7 +1355,7 @@ figure.dotted-bg {
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
     .custom-accordion .accordion-item .btn-link:before {
-      font-family: 'icomoon';
+      font-family: myfont;
       content: "\f067";
       position: absolute;
       top: 50%;
@@ -1364,7 +1370,7 @@ figure.dotted-bg {
       color: #ffffff !important;
       background: #0389ff; }
       .custom-accordion .accordion-item .btn-link[aria-expanded="true"]:before {
-        font-family: 'icomoon';
+        font-family: myfont;
         content: "\f068";
         position: absolute;
         color: #ffffff;
@@ -1429,7 +1435,7 @@ figure.dotted-bg {
   pointer-events: none; }
 
 .control__indicator:after {
-  font-family: 'icomoon';
+  font-family: myfont;
   content: '\e5ca';
   position: absolute;
   display: none;
@@ -1577,7 +1583,7 @@ figure.dotted-bg {
   position: relative; }
   .list-check li:before {
     content: "\e5ca";
-    font-family: 'icomoon';
+    font-family: myfont;
     position: absolute;
     top: -.3rem;
     font-size: 20px;
@@ -1620,7 +1626,7 @@ figure.dotted-bg {
     top: -.2rem;
     content: "\e5ca";
     font-size: 20px;
-    font-family: 'icomoon'; }
+    font-family: myfont; }
 
 .ul-check.primary li:before {
   color: #0389ff; }
