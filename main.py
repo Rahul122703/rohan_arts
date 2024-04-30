@@ -4,6 +4,7 @@ app=Flask(__name__)
 
 @app.route('/')
 def home():
+    print("YOU ARE CURRENTLY ON HOME PAGE")
     return render_template('index.html')
 
 if __name__ == '__main__':

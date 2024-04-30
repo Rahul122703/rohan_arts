@@ -2,3 +2,4 @@ host website
 change the white front end to black
 make messenging system smtp
 make connection with other medias footer
+link every image to a page
