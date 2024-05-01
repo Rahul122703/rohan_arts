@@ -355,8 +355,8 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-lg-7 text-center mx-auto">
-            <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Contact</strong></h2>
-            <p class="gsap-reveal-hero">Available for work. Get in touch</p>
+            <h2 class="section-heading gsap-reveal-hero mb-0"><strong>Contact me</strong></h2>
+            <p class="gsap-reveal-hero">Feel free to get in touch with me</p>
 
             <div class="wave gsap-reveal-hero" >
               <svg>
@@ -367,7 +367,7 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-9">
             {{ ckeditor.load() }}
             {{ ckeditor.config(name='body') }}
             <form action="{{url_for('contact')}}" method = "POST" class="contact-form">
@@ -387,7 +387,13 @@
               {{ render_form(contact_form) }}
 
             </form>
-              <strong><b>Lets connect on <a href = "https://www.instagram.com/rohan__arts?igsh=b21yZ3gxN3VxbnZj"><img src = "../static/images/website_icon/insta_svg.svg" height = "50" width = "50" /></a> !!</b></strong>
+              <strong><b>
+                
+                <a href="" class="typewrite" data-period="2000" data-type='[ "Follow me.", "on.", "instagram.", "for more." ]'>
+                  <span class="wrap"></span>
+                </a>
+                <h1>wergwegwergwergwergwerg werg wer werg re </h1>
+                <a href = "https://www.instagram.com/rohan__arts?igsh=b21yZ3gxN3VxbnZj"><img src = "../static/images/website_icon/insta_svg.svg" height = "50" width = "50" /></a> !!</b></strong>
           </div>
         </div>
       </div>
