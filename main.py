@@ -49,9 +49,10 @@ def send_mail(from_user, body):
 @app.context_processor
 def all_variables():
     contact_form = ContactForm()
-    with open(r"website\static\images\image_text.txt",'r') as image_text:
-        text_list = [text.replace("\n", "") for text in image_text.readlines()]
-        print(text_list)
+    
+    text_list = ["The JOKER", "DEAD POOL", "AVATAR","THOMAS SHELBY","SPIDER MAN","EMMA WATSON","MS DHONI","ROCKY BHAI","IMAGINARY GIRL","LOCKEY", "RAJESH KHANNA","SHASHI KAPOOR"]
+
+
     return dict(contact_form = contact_form,
                 text_list = text_list)
 
