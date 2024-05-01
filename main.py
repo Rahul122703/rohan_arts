@@ -1,13 +1,12 @@
 from flask import Flask,redirect,url_for,render_template,request
 from form import ContactForm
 from flask_bootstrap import Bootstrap5
-
-import time
-
+from flask_ckeditor import CKEditor
 
 app=Flask(__name__)
 app.config['SECRET_KEY']="rohanarts"
 
+cke_editor = CKEditor(app)
 bootstrap_app = Bootstrap5(app)
 
 #ABC
@@ -50,8 +49,11 @@ def send_mail(from_user, body):
 @app.context_processor
 def all_variables():
     contact_form = ContactForm()
-    return dict(contact_form = contact_form)
-
+    with open(r"website\static\images\image_text.txt",'r') as image_text:
+        text_list = [text.replace("\n", "") for text in image_text.readlines()]
+        print(text_list)
+    return dict(contact_form = contact_form,
+                text_list = text_list)
 
 @app.route('/')
 def index():

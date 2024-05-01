@@ -30,8 +30,7 @@
                 <div class="overlay">
                   <span class="wrap-icon icon-link2"></span>
                   <div class="portfolio-item-content">
-                    <h3>Obsessed Book</h3>
-                    <p>web, branding</p>
+                    <h3>{{text_list[i-1]}}</h3>
                   </div>
                 </div>
                 <img src="../static/images/img_{{i}}.jpg" class="lazyload  img-fluid" alt="Images" />
@@ -369,6 +368,8 @@
 
         <div class="row">
           <div class="col-lg-6">
+            {{ ckeditor.load() }}
+            {{ ckeditor.config(name='body') }}
             <form action="{{url_for('contact')}}" method = "POST" class="contact-form">
               {% if mail_flash %}
                 <p style="color: #008000; /* Green color for success message */
@@ -384,8 +385,9 @@
               {% endif %}
               {% from "bootstrap5/form.html" import render_form %} 
               {{ render_form(contact_form) }}
+
             </form>
-              <strong><b>Lets connect on <a href = "https://www.instagram.com/rohan__arts?igsh=b21yZ3gxN3VxbnZj"><img src = "../static/images/instagram.gif" /></a> !!</b></strong>
+              <strong><b>Lets connect on <a href = "https://www.instagram.com/rohan__arts?igsh=b21yZ3gxN3VxbnZj"><img src = "../static/images/website_icon/insta_svg.svg" height = "50" width = "50" /></a> !!</b></strong>
           </div>
         </div>
       </div>

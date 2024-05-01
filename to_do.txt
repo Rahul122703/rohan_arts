@@ -1,4 +1,4 @@
 
 change the white front end to black
-make connection with other medias footer
+
 link every image to a page
