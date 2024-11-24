@@ -4,180 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glassmorphic Sidebar</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            background: linear-gradient(135deg, #74ebd5, #9face6);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        /* Sidebar styling */
-        .sidebar {
-            height: 100vh;
-            width: 250px;
-            background: rgba(255, 255, 255, 0);
-            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border-radius: 0 15px 15px 0;
-            border: 1px solid rgba(255, 255, 255, 0.18);
-            position: fixed;
-            top: 0;
-            left: -250px;
-            /* Hidden initially */
-            transition: all 0.3s ease;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .sidebar.active {
-            left: 0;
-            /* Slide in when active */
-        }
-
-        .sidebar h2 {
-            margin: 20px 0;
-            font-size: 22px;
-            font-weight: bold;
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .sidebar nav ul {
-            list-style: none;
-            width: 100%;
-            padding: 0;
-        }
-
-        .sidebar nav ul li {
-            width: 100%;
-        }
-
-        .sidebar nav ul li a {
-            display: block;
-            padding: 15px 20px;
-            text-decoration: none;
-            color: #ffffff;
-            font-size: 18px;
-            font-weight: 500;
-            transition: background 0.3s ease, color 0.3s ease;
-            border-radius: 10px;
-        }
-
-        .sidebar nav ul li a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            color: #000;
-        }
-
-        /* Footer donate button */
-        .donate-button {
-            margin: 20px auto;
-            padding: 12px 30px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            border: none;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background 0.3s ease, color 0.3s ease;
-        }
-
-        .donate-button:hover {
-            background: rgba(255, 255, 255, 0.4);
-            color: #000;
-        }
-
-        /* Toggle button styling */
-        .toggle-btn {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            background: rgba(255, 255, 255, 0.2);
-            color: #ffffff;
-            padding: 10px 15px;
-            border: none;
-            cursor: pointer;
-            border-radius: 10px;
-            font-size: 16px;
-            font-weight: bold;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: all 0.3s ease;
-            z-index: 2000;
-        }
-
-        .toggle-btn:hover {
-            background: rgba(255, 255, 255, 0.4);
-            color: #000;
-        }
-
-        /* Content Area */
-        .content {
-            margin-left: 0;
-            transition: margin-left 0.3s ease;
-            padding: 20px;
-            width: 100%;
-            color: #ffffff;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .content.sidebar-active {
-            margin-left: 250px;
-            /* Adjust content when sidebar is visible */
-        }
-    </style>
+    <title>Glassmorphic Sidebar with Video Background</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Toggle Button -->
-    <button class="toggle-btn" id="toggleSidebar">☰ Menu</button>
+    <div class="all_container">
+        <!-- Video Background -->
+        <div class="video_container">
+            <video muted autoplay loop class="video">
+                <source src="sketch_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
 
-    <!-- Sidebar -->
-    <aside class="sidebar" id="sidebar">
-        <h2>Art By [Your Friend's Name]</h2>
-        <nav>
-            <ul>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#store">Store</a></li>
-                <li><a href="#blogs">Blogs</a></li>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
-        </nav>
-        <button class="donate-button">Donate Me</button>
-    </aside>
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <button class="close-btn" id="closeBtn">×</button>
+            <h2>ROHAN ARTS</h2>
+            <nav>
+                <ul>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#store">Store</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+            <button class="donate-button">Donate Me</button>
+        </aside>
 
-    <!-- Content Area -->
-    <div class="content" id="content">
-        <h1>Welcome to the Art Portfolio</h1>
-        <p>Explore the sidebar for more options and enjoy the stunning artwork!</p>
+        <!-- Sidebar Toggle Button (>) -->
+        <button class="toggle-btn" id="toggleSidebar"><img src="./assets/icons/side_bar.png" class="sidebar_button"
+                alt=">"></button>
+
+        <!-- Overlay for Content -->
+        <div class="overlay">
+            <h1 >Explore original sketches, paintings, and custom artwork crafted with passion and precision</h1>
+        </div>
     </div>
 
-    <script>
-        // JavaScript to toggle the sidebar
-        const toggleBtn = document.getElementById('toggleSidebar');
-        const sidebar = document.getElementById('sidebar');
-        const content = document.getElementById('content');
-
-        toggleBtn.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
-            content.classList.toggle('sidebar-active');
-        });
-    </script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
