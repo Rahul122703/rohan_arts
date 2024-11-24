@@ -41,7 +41,7 @@
   position: fixed;
   top: 0;
   left: -100vw; /* Initially hidden */
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   z-index: 1000;
   display: flex;
   flex-direction: column;
@@ -165,19 +165,56 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .overlay h1 {
+  color: #ffffff;
+  text-align: center;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.25rem;
+  text-transform: capitalize;
+}
+.subheading {
   color: #ffffff;
   text-align: center;
   font-size: 1.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   letter-spacing: 0.25rem;
   text-transform: capitalize;
+  padding-top: 20px;
 }
 
 @media (max-width: 768px) {
   .sidebar {
     width: 100vw;
   }
+}
+
+/* GALLERY BUTTON */
+.button-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.gallery-btn {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff; /* Text color */
+  background-color: transparent; /* No background color initially */
+  border: 2px solid #fff; /* White border */
+  border-radius: 5px;
+  transition: all 0.5s ease; /* Smooth transition for hover effect */
+}
+
+.gallery-btn:hover {
+  background-color: #fff; /* White background when hovered */
+  color: black; /* Text color becomes transparent */
+  border-color: #fff; /* Border remains white */
 }
