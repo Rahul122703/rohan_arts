@@ -120,21 +120,20 @@ if (body_width > 768) {
   });
   phoneGallery.innerHTML += `
     <div class="modal_container">
-            <div class="modal">
-                <div class="top_container">
-                    <div class="centerer">
-                        <div class="modal_button cross">&#x2716;</div>
-                        <div class="view_image_container">
-                            <img src="./assets/art_work/img_9.jpg" class="view_image" alt>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="modal_image_container">
-                    <div class="all_image_container"></div>
-                </div>
-            </div>
-        </div>`;
+      <div class="modal">
+          <div class="top_container">
+              <div class="centerer">
+                  <div class="modal_button cross">&#x2716;</div>
+                  <div class="view_image_container">
+                      <img src="./assets/art_work/img_9.jpg" class="view_image" alt>
+                  </div>
+              </div>
+          </div>
+          <div class="modal_image_container">
+              <div class="all_image_container"></div>
+          </div>
+      </div>
+    </div>`;
   gallery_container.appendChild(phoneGallery);
   console.log(phoneGallery.innerHTML);
 }

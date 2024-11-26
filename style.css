@@ -288,7 +288,7 @@
 }
 @media (max-width: 768px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 .results {
@@ -433,21 +433,19 @@ ul:is(:hover, :focus-within) img {
 /* Modal Styling */
 .modal_container {
   border: none;
-  position: absolute;
-  background: rgba(0, 0, 0, 0);
-  /* backdrop-filter: blur(5px); */
-  top: -5vh;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
   left: 0;
   height: 100vh;
   width: 95vw;
   margin: 0px;
   display: none;
   z-index: 500;
+  position: absolute;
 }
 
 .modal {
-  margin: 0 auto;
-  margin-top: 18vh;
+  margin-top: 4rem;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(20px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
