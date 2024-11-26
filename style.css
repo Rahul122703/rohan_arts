@@ -7,7 +7,7 @@
 }
 
 :root {
-  --vw_width: 100vw;
+  --vw_width: 99vw;
   --vh_height: 100vh;
 }
 
@@ -15,7 +15,6 @@
 .video_container {
   width: var(--vw_width);
   height: var(--vh_height);
-  overflow: hidden;
   /* position: fixed; */
   top: 0;
   left: 0;
@@ -27,7 +26,11 @@
   height: 100%;
   object-fit: cover;
 }
-
+.first_section {
+  border: 2px solid black;
+  border-radius: 25px;
+  overflow: hidden;
+}
 /* Sidebar */
 .sidebar {
   height: 100vh;
@@ -183,6 +186,8 @@
   align-items: center;
   display: flex;
   flex-direction: column;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 .overlay h1 {
@@ -239,15 +244,18 @@
 .gallery_container {
   position: relative; /* Establishes a positioning context for pseudo-elements */
   height: 100vh;
-  width: 100vw;
+  width: 99vw;
   display: grid;
   place-items: center;
   height: 100vh;
-  background-image: url("./assets/bg/gallery_home2.jpg");
+  background-image: url("./assets/bg/gallery4.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
   color: #fff; /* White text for contrast */
+  border: 2px solid black;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
 /* Overlay to Enhance Readability */
@@ -259,7 +267,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.25); /* Semi-transparent overlay */
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
 
   z-index: 1;
 }
@@ -271,13 +279,18 @@
 }
 
 .section-title {
-  font-size: 1.5rem;
-  color: #222;
+  font-size: 3rem;
+  color: #ffffff;
   margin-bottom: 20px;
   position: relative;
   text-align: center;
+  text-transform: capitalize;
 }
-
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
 .results {
   display: flex;
   width: calc(80% - 2rem);
@@ -374,152 +387,156 @@ ul:is(:hover, :focus-within) img {
 }
 /* MOBILEGALLERY123 */
 .phone_gallery {
-  border: 2px solid red;
-  width: 90vw;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 97vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   margin: 0 auto;
   gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
 }
+
 .image_container {
-  border: 2px solid green;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
   height: 100px;
-  /* overflow: hidden; */
   display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.image_container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
 .grid_image {
+  width: 100%;
   height: 100%;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  object-fit: cover;
 }
 
-/* modalcontainer123  */
+.grid_image:hover {
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+/* Modal Styling */
 .modal_container {
-  border: 2px solid red;
-  position: fixed;
-  background: rgba(0, 0, 0, 0.815);
-  top: 0px;
+  border: none;
+  position: absolute;
+  background: rgba(0, 0, 0, 0);
+  /* backdrop-filter: blur(5px); */
+  top: -5vh;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 95vw;
   margin: 0px;
   display: none;
   z-index: 500;
 }
 
-.modal_button {
-  color: white;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
+.modal {
+  margin: 0 auto;
+  margin-top: 18vh;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1300px;
+  padding: 1rem;
+  color: #fff;
+  border: 2px solid white;
+}
+
+.centerer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.view_image_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .cross {
   position: absolute;
-  top: 1rem;
-  right: 0.8rem;
-  font-size: 4rem;
-  font-weight: 500;
+  top: 0rem;
+  left: 20.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
   cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.modal {
-  top: 6vh;
-  margin: 0 auto;
-  margin-top: 18vh;
-  border: 2px solid rgb(13, 230, 67);
-  display: flex;
-  flex-direction: column;
-  max-width: 1300px;
-  box-sizing: border-box;
-}
-
-.top_container {
-  border: 2px solid red;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.centerer {
-  margin: 0 auto;
-
-  border: 2px solid rgb(0, 0, 0);
-  display: flex;
-  width: 100%;
-  max-width: 1250px;
-  /* height: 44vh; */
-  /* justify-content: space-around; */
-  align-items: center;
+.cross:hover {
+  transform: scale(1.2);
+  color: rgba(255, 0, 0, 0.8);
+  margin-left: 10px;
 }
 
 .view_image_container {
-  /* border: 2px solid red; */
-  margin: 0px 20px 0px 20px;
+  margin: 0px 20px;
   width: 100%;
   height: 371px;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .view_image {
   height: 100%;
+  transition: transform 0.3s ease;
 }
 
-.modal h3 {
-  color: white;
-  font-size: 1.5rem;
-  margin: 0 auto;
-  margin-top: 25px;
+.view_image:hover {
+  transform: scale(1.1);
 }
 
-.modal_image_container {
-  border: 2px solid rgb(51, 6, 255);
-}
 .all_image_container {
-  border: 2px solid rgb(3, 255, 66);
   margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   height: 80px;
-  min-width: 90%;
   overflow: auto;
   scroll-behavior: smooth;
-  transition: transform 0.3s ease-in-out;
+  gap: 0.5rem;
 }
+
 .modal_image_container img {
-  /* height: 100%; */
-  /* width: 100%; */
   object-fit: cover;
   opacity: 0.5;
   height: 80px;
+  border-radius: 8px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-.modal_image_container .selected {
+.modal_image_container img.selected {
   opacity: 1;
   transform: scale(1.1);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
-.selected:hover {
+.modal_image_container img:hover {
   opacity: 0.7;
-  z-index: 10;
-}
-
-.mod_img {
-  margin-left: 1rem;
-}
-
-.mod_img:hover {
-  opacity: 1;
-}
-
-.right_translate {
-  transform: translateX(10%);
-}
-
-.left_translate {
-  transform: translateX(-10%);
+  transform: scale(1.05);
 }
