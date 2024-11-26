@@ -1,3 +1,5 @@
+const body_width = document.querySelector("body").getBoundingClientRect().width;
+
 const toggleBtn = document.getElementById("toggleSidebar");
 const sidebar = document.getElementById("sidebar");
 const closeBtn = document.getElementById("closeBtn");
@@ -11,3 +13,9 @@ closeBtn.addEventListener("click", () => {
   sidebar.classList.remove("active");
   toggleBtn.style.display = "block";
 });
+
+const gallery_container = document.querySelector(".results");
+
+if (body_width < 400) {
+  
+}
