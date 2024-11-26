@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glassmorphic Sidebar with Video Background</title>
+    <link rel="icon" type="image/x-icon" href="./assets/icons/rohan_arts.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="1st_page">
+        <!-- Video Background -->
+        <div class="video_container">
+            <!-- <video muted autoplay loop class="video">
+                <source src="sketch_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video> -->
+            <img src="./assets/bg/section_1.jpg" alt="">
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <button class="close-btn" id="closeBtn">×</button>
+            <div class="user_top">
+                <img src="./assets/icons/rohan_arts.png" alt="LOGO" style="width:4rem;">
+                <h2>ROHAN ARTS</h2>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#store">Store</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+            <button class="donate-button">Donate Me</button>
+        </aside>
+
+        <!-- Sidebar Toggle Button (>) -->
+        <button class="toggle-btn" id="toggleSidebar">
+            <img src="./assets/icons/side_bar.png" class="sidebar_button" alt=">" style="width:2rem;">
+        </button>
+
+        <!-- Overlay for Content -->
+        <div class="overlay">
+            <h1>Art That Speaks Beyond Words</h1>
+            <div class="subheading">Explore original sketches, paintings, and custom artwork crafted with passion and
+                precision</div>
+            <div class="button-container">
+                <a href="#gallery" class="gallery-btn">View Gallery</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- GALLERY123 -->
+    <div class="gallery_container">
+        <h1 class="section-title">SOME OF MY PROMINENT ART WORK</h1>
+
+        <section class="phone_gallery ">
+            <div class="image_container">
+                <img src="./assets/art_work/img_1.jpg" class="grid_image" data-id="1" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_2.jpg" class="grid_image" data-id="2" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_3.jpg" class="grid_image" data-id="3" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_4.jpg" class="grid_image" data-id="4" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_5.jpg" class="grid_image" data-id="5" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_6.jpg" class="grid_image" data-id="6" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_7.jpg" class="grid_image" data-id="7" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_8.jpg" class="grid_image" data-id="8" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_9.jpg" class="grid_image" data-id="9" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_10.jpg" class="grid_image" data-id="10" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_11.jpg" class="grid_image" data-id="11" alt>
+            </div>
+            <div class="image_container">
+                <img src="./assets/art_work/img_12.jpg" class="grid_image" data-id="12" alt>
+            </div>
+        </section>
+        <div class="modal_container">
+            <div class="modal_button cross">X</div>
+            <div class="modal">
+                <div class="top_container">
+                    <div class="centerer">
+                        <div class="left modal_button">
+                            < </div>
+                                <div class="view_image_container">
+                                    <img src="./assets/art_work/img_9.jpg" class="view_image" alt>
+                                </div>
+                                <div class="right modal_button"> > </div>
+                        </div>
+                    </div>
+                    <div class="modal_image_container">
+                        <div class="all_image_container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="results">
+            <!-- <li class="result">
+                <img src="./assets/art_work/img_1.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_2.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_3.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_4.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_5.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_6.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_7.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_8.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_9.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_10.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_11.jpg" height="500" alt="">
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_12.jpg" height="500" alt="">
+            </li> -->
+        </ul>
+    </div>
+
+
+    <script src="scripts.js"></script>
+    <script src="gallery.js"></script>
+</body>
+
+</html>
