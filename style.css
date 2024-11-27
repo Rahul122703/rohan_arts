@@ -19,6 +19,7 @@
   top: 0;
   left: 0;
   z-index: -1;
+  background: #ffffff;
 }
 
 .video {
@@ -198,7 +199,7 @@
 }
 
 .overlay h1 {
-  color: #ffffff;
+  color: #000000;
   text-align: center;
   font-size: 2.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -255,7 +256,7 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg");
+  /* background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
