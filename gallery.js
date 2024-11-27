@@ -39,6 +39,15 @@ class ImageGallery {
         }
       }.bind(this)
     );
+    this.touchStartHandler = (e) => {
+      this.touchStartX = e.touches[0].clientX;
+    };
+    this.touchMoveHandler = (e) => {
+      this.touchEndX = e.touches[0].clientX;
+    };
+    this.touchEndHandler = () => {
+      this.handleSwipe();
+    };
   }
   openImage(image) {
     //123
@@ -58,19 +67,21 @@ class ImageGallery {
     this.modal_image.addEventListener("click", this.choose_image);
     // this.right.addEventListener("click", this.next_image);
     // this.left.addEventListener("click", this.prev_image);
-    this.view_image_container.addEventListener("touchstart", (e) => {
-      this.touchStartX = e.touches[0].clientX;
-    });
-
-    this.view_image_container.addEventListener("touchmove", (e) => {
-      this.touchEndX = e.touches[0].clientX;
-    });
-
-    this.view_image_container.addEventListener("touchend", this.handleSwipe());
+    this.view_image_container.addEventListener(
+      "touchstart",
+      this.touchStartHandler
+    );
+    this.view_image_container.addEventListener(
+      "touchmove",
+      this.touchMoveHandler
+    );
+    this.view_image_container.addEventListener(
+      "touchend",
+      this.touchEndHandler
+    );
   }
 
   handleSwipe() {
-    console.log("this is excecuted");
     const swipeThreshold = 50;
     const swipeDistance = this.touchEndX - this.touchStartX;
     if (swipeDistance > swipeThreshold) {
@@ -85,23 +96,23 @@ class ImageGallery {
 
     // this.right.removeEventListener("click", this.next_image);
     // this.left.removeEventListener("click", this.prev_image);
-
-    this.view_image_container.removeEventListener("touchstart", (e) => {
-      this.touchStartX = e.touches[0].clientX;
-    });
-    this.view_image_container.removeEventListener("touchmove", (e) => {
-      this.touchEndX = e.touches[0].clientX;
-    });
+    this.view_image_container.removeEventListener(
+      "touchstart",
+      this.touchStartHandler
+    );
+    this.view_image_container.removeEventListener(
+      "touchmove",
+      this.touchMoveHandler
+    );
     this.view_image_container.removeEventListener(
       "touchend",
-      this.handleSwipe()
+      this.touchEndHandler
     );
     this.modal.style.display = "none";
   }
   setImage(image) {
     const view_image = getElement(".view_image");
     this.current_image_data_id = image.getAttribute("data-id");
-    console.log(this.current_image_data_id);
     view_image.src = image.src;
     if (this.current_image_data_id >= 1 && this.current_image_data_id <= 4) {
       this.modal_image.scrollLeft = 0;
