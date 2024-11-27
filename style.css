@@ -1,13 +1,12 @@
-/* General Reset */
+@font-face {
+  font-family: newFont;
+  src: url("./PermanentMarker-Regular.ttf");
+}
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: newFont;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 :root {
@@ -327,7 +326,7 @@ html {
 
 .section-title {
   font-size: 3rem;
-  color: #ffffff;
+  color: #000000;
   margin-bottom: 20px;
   position: relative;
   text-align: center;
@@ -335,7 +334,7 @@ html {
 }
 @media (max-width: 768px) {
   .section-title {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 }
 .results {
@@ -436,151 +435,7 @@ ul:is(:hover, :focus-within) img {
 .section {
   background: white;
 }
-/* .phone_gallery {
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  width: 97vw;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  margin: 0 auto;
-  gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.514);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  border-radius: 12px;
-}
 
-.image_container {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 8px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.image_container:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
-}
-
-.grid_image {
-  width: 100%;
-  height: 100%;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  object-fit: cover;
-}
-
-.grid_image:hover {
-  transform: scale(1.1);
-  opacity: 0.9;
-}
-
-/* Modal Styling */
-/* .modal_container {
-  border: none;
-  background: rgba(0, 0, 0, 0);
-  top: 1px;
-  left: 1px;
-  height: 100vh;
-  width: 95vw;
-  margin: 0px;
-  display: none;
-  z-index: 500;
-  position: fixed;
-}
-
-.modal {
-  margin-top: 4rem;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  max-width: 1300px;
-  padding: 1rem;
-  color: #fff;
-  border: 2px solid white;
-}
-
-.centerer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.view_image_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-}
-
-.cross {
-  position: absolute;
-  top: 0rem;
-  left: 20.5rem;
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.view_image_container {
-  margin: 0px 20px;
-  width: 100%;
-  height: 371px;
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.view_image {
-  height: 100%;
-  transition: transform 0.3s ease;
-}
-
-.view_image:hover {
-  transform: scale(1.1);
-}
-
-.all_image_container {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  height: 80px;
-  overflow: auto;
-  gap: 0.5rem;
-}
-
-.modal_image_container img {
-  object-fit: cover;
-  opacity: 0.5;
-  height: 80px;
-  border-radius: 8px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.modal_image_container img.selected {
-  opacity: 1;
-  transform: scale(1.1);
-  border: 2px solid rgba(255, 255, 255, 0.4);
-}
-
-.modal_image_container img:hover {
-  opacity: 0.7;
-  transform: scale(1.05);
-} */
 /* Gallery Container */
 .phone_gallery {
   width: 97vw;
@@ -654,7 +509,7 @@ ul:is(:hover, :focus-within) img {
   top: -6vh;
   left: 0;
   height: 100vh;
-  width: 100vw;
+  width: 98vw;
   display: none;
   z-index: 500;
 }
@@ -741,6 +596,8 @@ ul:is(:hover, :focus-within) img {
   height: 80px;
   overflow-x: auto;
   gap: 0.5rem;
+  scroll-behavior: smooth;
+  scrollbar-color: none;
 }
 
 /* Thumbnails */
