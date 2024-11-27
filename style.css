@@ -483,12 +483,6 @@ ul:is(:hover, :focus-within) img {
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-.cross:hover {
-  transform: scale(1.2);
-  color: rgba(255, 0, 0, 0.8);
-  margin-left: 10px;
-}
-
 .view_image_container {
   margin: 0px 20px;
   width: 100%;
