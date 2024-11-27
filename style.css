@@ -248,7 +248,7 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  background-image: url("./assets/bg/gallery4.jpg");
+  background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
@@ -433,7 +433,7 @@ ul:is(:hover, :focus-within) img {
 /* Modal Styling */
 .modal_container {
   border: none;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0);
   top: 0;
   left: 0;
   height: 100vh;
