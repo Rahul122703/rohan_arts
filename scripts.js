@@ -137,3 +137,26 @@ if (body_width > 768) {
   gallery_container.appendChild(phoneGallery);
   console.log(phoneGallery.innerHTML);
 }
+
+// REMOVE SCROLL MODAL 123
+const modal_container = document.querySelector(".modal_container");
+window.addEventListener("scroll", () => {
+  console.log(window.pageYOffset);
+  if (window.pageYOffset <= 15) {
+    modal_container.style.display = "none";
+  }
+});
+
+const top_link = document.querySelector(".up_arrow");
+if (top_link) {
+  window.addEventListener("scroll", () => {
+    console.log(window.pageYOffset);
+    if (window.pageYOffset < 5) {
+      top_link.classList.add("top_link_hide");
+      console.log("if");
+    } else {
+      console.log("else");
+      top_link.classList.remove("top_link_hide");
+    }
+  });
+}

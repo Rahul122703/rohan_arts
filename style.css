@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --vw_width: 99vw;
   --vh_height: 100vh;
@@ -34,11 +38,24 @@
   object-fit: cover;
 }
 
+.up_arrow {
+  height: 20px;
+}
+#image_arrow_up {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 .first_section {
   border: 2px solid black;
   border-radius: 25px;
   overflow: hidden;
 }
+.top_link_hide {
+  display: none;
+}
+
 /* Sidebar */
 .sidebar {
   height: 100vh;
@@ -199,7 +216,7 @@
 }
 
 .overlay h1 {
-  color: #000000;
+  color: #ffffff;
   text-align: center;
   font-size: 2.5rem;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -256,7 +273,7 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  /* background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg"); */
+  background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
@@ -518,7 +535,6 @@ ul:is(:hover, :focus-within) img {
   justify-content: space-between;
   height: 80px;
   overflow: auto;
-  scroll-behavior: smooth;
   gap: 0.5rem;
 }
 
