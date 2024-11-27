@@ -78,30 +78,7 @@ const images = [
   },
 ];
 
-if (body_width > 768) {
-  const h1Element = document.createElement("h1");
-  h1Element.classList.add("section-title");
-  h1Element.innerHTML = "My Signature Art Pieces";
-
-  const ulElement = document.createElement("ul");
-  ulElement.classList.add("results");
-
-  images.forEach((image) => {
-    const liElement = document.createElement("li");
-    liElement.classList.add("result");
-
-    const imgElement = document.createElement("img");
-    imgElement.src = image.src;
-    imgElement.setAttribute("data-id", image.dataId);
-    imgElement.alt = image.alt;
-    imgElement.height = 500;
-
-    liElement.appendChild(imgElement);
-    ulElement.appendChild(liElement);
-  });
-  gallery_container.appendChild(ulElement);
-  // gallery_container.appendChild(h1Element);
-} else {
+function insertGallery() {
   const phoneGallery = document.createElement("section");
   phoneGallery.classList.add("phone_gallery");
   document.body.appendChild(phoneGallery);
@@ -135,13 +112,38 @@ if (body_width > 768) {
       </div>
     </div>`;
   gallery_container.appendChild(phoneGallery);
-  console.log(phoneGallery.innerHTML);
+}
+
+if (body_width > 768) {
+  const h1Element = document.createElement("h1");
+  h1Element.classList.add("section-title");
+  h1Element.innerHTML = "My Signature Art Pieces";
+
+  const ulElement = document.createElement("ul");
+  ulElement.classList.add("results");
+
+  images.forEach((image) => {
+    const liElement = document.createElement("li");
+    liElement.classList.add("result");
+
+    const imgElement = document.createElement("img");
+    imgElement.src = image.src;
+    imgElement.setAttribute("data-id", image.dataId);
+    imgElement.alt = image.alt;
+    imgElement.height = 500;
+
+    liElement.appendChild(imgElement);
+    ulElement.appendChild(liElement);
+  });
+  gallery_container.appendChild(ulElement);
+  // gallery_container.appendChild(h1Element);
+} else {
+  insertGallery();
 }
 
 // REMOVE SCROLL MODAL 123
 const modal_container = document.querySelector(".modal_container");
 window.addEventListener("scroll", () => {
-  console.log(window.pageYOffset);
   if (window.pageYOffset <= 15) {
     modal_container.style.display = "none";
   }
@@ -150,12 +152,9 @@ window.addEventListener("scroll", () => {
 const top_link = document.querySelector(".up_arrow");
 if (top_link) {
   window.addEventListener("scroll", () => {
-    console.log(window.pageYOffset);
     if (window.pageYOffset < 5) {
       top_link.classList.add("top_link_hide");
-      console.log("if");
     } else {
-      console.log("else");
       top_link.classList.remove("top_link_hide");
     }
   });

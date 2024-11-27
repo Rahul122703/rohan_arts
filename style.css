@@ -506,6 +506,7 @@ ul:is(:hover, :focus-within) img {
   color: white;
   cursor: pointer;
   transition: transform 0.2s ease, color 0.2s ease;
+  border: 2px solid black;
 }
 
 .view_image_container {

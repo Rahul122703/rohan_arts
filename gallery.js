@@ -66,12 +66,11 @@ class ImageGallery {
       this.touchEndX = e.touches[0].clientX;
     });
 
-    this.view_image_container.addEventListener("touchend", () => {
-      this.handleSwipe();
-    });
+    this.view_image_container.addEventListener("touchend", this.handleSwipe());
   }
 
   handleSwipe() {
+    console.log("this is excecuted");
     const swipeThreshold = 50;
     const swipeDistance = this.touchEndX - this.touchStartX;
     if (swipeDistance > swipeThreshold) {
@@ -81,22 +80,23 @@ class ImageGallery {
     }
   }
   closeModal() {
-    this.modal.style.display = "none";
     this.cross_button.removeEventListener("click", this.closeModal);
     this.modal_image.removeEventListener("click", this.choose_image);
+
     // this.right.removeEventListener("click", this.next_image);
     // this.left.removeEventListener("click", this.prev_image);
+
     this.view_image_container.removeEventListener("touchstart", (e) => {
       this.touchStartX = e.touches[0].clientX;
     });
-
     this.view_image_container.removeEventListener("touchmove", (e) => {
       this.touchEndX = e.touches[0].clientX;
     });
-
-    this.view_image_container.removeEventListener("touchend", () => {
-      this.handleSwipe();
-    });
+    this.view_image_container.removeEventListener(
+      "touchend",
+      this.handleSwipe()
+    );
+    this.modal.style.display = "none";
   }
   setImage(image) {
     const view_image = getElement(".view_image");
@@ -104,16 +104,13 @@ class ImageGallery {
     console.log(this.current_image_data_id);
     view_image.src = image.src;
     if (this.current_image_data_id >= 1 && this.current_image_data_id <= 4) {
-      console.log("executed1");
       this.modal_image.scrollLeft = 0;
     } else if (
       this.current_image_data_id >= 5 &&
       this.current_image_data_id <= 8
     ) {
-      console.log("executed2");
       this.modal_image.scrollLeft = 350;
     } else {
-      console.log("executed3");
       this.modal_image.scrollLeft = 700;
     }
   }
