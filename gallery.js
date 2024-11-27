@@ -86,6 +86,17 @@ class ImageGallery {
     this.modal_image.removeEventListener("click", this.choose_image);
     // this.right.removeEventListener("click", this.next_image);
     // this.left.removeEventListener("click", this.prev_image);
+    this.view_image_container.removeEventListener("touchstart", (e) => {
+      this.touchStartX = e.touches[0].clientX;
+    });
+
+    this.view_image_container.removeEventListener("touchmove", (e) => {
+      this.touchEndX = e.touches[0].clientX;
+    });
+
+    this.view_image_container.removeEventListener("touchend", () => {
+      this.handleSwipe();
+    });
   }
   setImage(image) {
     const view_image = getElement(".view_image");
