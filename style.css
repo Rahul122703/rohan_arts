@@ -23,7 +23,7 @@ html {
   top: 0;
   left: 0;
   z-index: -1;
-  background: #ffffff;
+  background: #051136;
 }
 
 .video {
@@ -273,7 +273,7 @@ html {
   display: grid;
   place-items: center;
   height: 100vh;
-  background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg");
+  /* background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
