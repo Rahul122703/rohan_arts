@@ -14,8 +14,6 @@ class ImageGallery {
     this.modal = getElement(".modal_container");
 
     this.cross_button = getElement(".cross");
-    // this.right = getElement(".right");
-    // this.left = getElement(".left");
     this.modal_image = getElement(".all_image_container");
 
     this.closeModal = this.closeModal.bind(this);
@@ -65,8 +63,6 @@ class ImageGallery {
     getElement(".all_image_container").innerHTML = modal_images;
     this.cross_button.addEventListener("click", this.closeModal);
     this.modal_image.addEventListener("click", this.choose_image);
-    // this.right.addEventListener("click", this.next_image);
-    // this.left.addEventListener("click", this.prev_image);
     this.view_image_container.addEventListener(
       "touchstart",
       this.touchStartHandler
@@ -93,9 +89,6 @@ class ImageGallery {
   closeModal() {
     this.cross_button.removeEventListener("click", this.closeModal);
     this.modal_image.removeEventListener("click", this.choose_image);
-
-    // this.right.removeEventListener("click", this.next_image);
-    // this.left.removeEventListener("click", this.prev_image);
     this.view_image_container.removeEventListener(
       "touchstart",
       this.touchStartHandler
@@ -153,7 +146,6 @@ class ImageGallery {
     }
   }
 }
-const phone_gallery = getElement(".phone_gallery");
-if (phone_gallery) {
+if (getElement(".phone_gallery")) {
   const nature = new ImageGallery(getElement(".phone_gallery"));
 }

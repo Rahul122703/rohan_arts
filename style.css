@@ -336,7 +336,7 @@
     font-size: 1.6rem;
   }
 }
-/* .results {
+.results {
   display: flex;
   width: calc(80% - 2rem);
   padding: 0;
@@ -429,7 +429,7 @@ ul:is(:hover, :focus-within) img {
   + .result {
   --active-lerp: var(--lerp-6);
   z-index: 1;
-} */
+}
 /* MOBILEGALLERY123 */
 .section {
   background: white;
@@ -617,4 +617,19 @@ ul:is(:hover, :focus-within) img {
 .modal_image_container img:hover {
   opacity: 0.8;
   transform: scale(1.05);
+}
+
+.gc_pc {
+  display: grid;
+}
+.gc_phone {
+  display: none;
+}
+@media (max-width: 768px) {
+  .gc_pc {
+    display: none;
+  }
+  .gc_phone {
+    display: grid;
+  }
 }

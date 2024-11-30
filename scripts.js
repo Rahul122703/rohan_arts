@@ -14,7 +14,8 @@ closeBtn.addEventListener("click", () => {
   toggleBtn.style.display = "block";
 });
 
-const gallery_container = document.querySelector(".gallery_container");
+const gallery_container_pc = document.querySelector(".gc_pc");
+const gallery_container_phone = document.querySelector(".gc_phone");
 const images = [
   {
     src: "./assets/art_work/img_1.jpg",
@@ -112,37 +113,33 @@ function insertGallery() {
       </div>
     </section>`;
 
-  gallery_container.innerHTML += phoneGalleryHTML;
+  gallery_container_phone.innerHTML += phoneGalleryHTML;
 }
+const h1ElementHTML = `<h1 class="section-title">My Signature Art Pieces</h1>`;
+const ulElementHTML = `
+<ul class="results">
+  ${images
+    .map(
+      (image) => `
+      <li class="result">
+        <img 
+          src="${image.src}" 
+          data-id="${image.dataId}" 
+          alt="${image.alt}" 
+          height="500"
+        />
+      </li>`
+    )
+    .join("")}
+</ul>`;
 
-if (body_width > 768) {
-  const h1ElementHTML = `<h1 class="section-title">My Signature Art Pieces</h1>`;
-  const ulElementHTML = `
-  <ul class="results">
-    ${images
-      .map(
-        (image) => `
-        <li class="result">
-          <img 
-            src="${image.src}" 
-            data-id="${image.dataId}" 
-            alt="${image.alt}" 
-            height="500"
-          />
-        </li>`
-      )
-      .join("")}
-  </ul>`;
-
-  gallery_container.innerHTML += h1ElementHTML + ulElementHTML;
-} else {
-  insertGallery();
-}
+gallery_container_pc.innerHTML += h1ElementHTML + ulElementHTML;
+insertGallery();
 
 // REMOVE SCROLL MODAL 123
 const modal_container = document.querySelector(".modal_container");
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset <= 15) {
+  if (window.pageYOffset <= 200) {
     modal_container.style.display = "none";
   }
 });
