@@ -294,7 +294,6 @@
   display: grid;
   place-items: center;
   height: 100vh;
-  /* background-image: url("https://res.cloudinary.com/dle5gmw0f/image/upload/v1732688614/gallery4_zrjunc.jpg"); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
@@ -337,7 +336,7 @@
     font-size: 1.6rem;
   }
 }
-.results {
+/* .results {
   display: flex;
   width: calc(80% - 2rem);
   padding: 0;
@@ -430,7 +429,7 @@ ul:is(:hover, :focus-within) img {
   + .result {
   --active-lerp: var(--lerp-6);
   z-index: 1;
-}
+} */
 /* MOBILEGALLERY123 */
 .section {
   background: white;
