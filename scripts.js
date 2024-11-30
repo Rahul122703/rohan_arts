@@ -1,5 +1,3 @@
-const body_width = document.querySelector("body").getBoundingClientRect().width;
-
 const toggleBtn = document.getElementById("toggleSidebar");
 const sidebar = document.getElementById("sidebar");
 const closeBtn = document.getElementById("closeBtn");
