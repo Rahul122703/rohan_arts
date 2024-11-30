@@ -15,64 +15,126 @@ closeBtn.addEventListener("click", () => {
 });
 
 const gallery_container = document.querySelector(".gallery_container");
+// const images = [
+//   {
+//     src: "./assets/art_work/img_1.jpg",
+//     dataId: 1,
+//     alt: "Image 1",
+//   },
+//   {
+//     src: "./assets/art_work/img_2.jpg",
+//     dataId: 2,
+//     alt: "Image 2",
+//   },
+//   {
+//     src: "./assets/art_work/img_3.jpg",
+//     dataId: 3,
+//     alt: "Image 3",
+//   },
+//   {
+//     src: "./assets/art_work/img_4.jpg",
+//     dataId: 4,
+//     alt: "Image 4",
+//   },
+//   {
+//     src: "./assets/art_work/img_5.jpg",
+//     dataId: 5,
+//     alt: "Image 5",
+//   },
+//   {
+//     src: "./assets/art_work/img_6.jpg",
+//     dataId: 6,
+//     alt: "Image 6",
+//   },
+//   {
+//     src: "./assets/art_work/img_7.jpg",
+//     dataId: 7,
+//     alt: "Image 7",
+//   },
+//   {
+//     src: "./assets/art_work/img_8.jpg",
+//     dataId: 8,
+//     alt: "Image 8",
+//   },
+//   {
+//     src: "./assets/art_work/img_9.jpg",
+//     dataId: 9,
+//     alt: "Image 9",
+//   },
+//   {
+//     src: "./assets/art_work/img_10.jpg",
+//     dataId: 10,
+//     alt: "Image 10",
+//   },
+//   {
+//     src: "./assets/art_work/img_11.jpg",
+//     dataId: 11,
+//     alt: "Image 11",
+//   },
+//   {
+//     src: "./assets/art_work/img_12.jpg",
+//     dataId: 12,
+//     alt: "Image 12",
+//   },
+// ];
 const images = [
   {
-    src: "./assets/art_work/img_1.jpg",
+    src: "https://via.placeholder.com/150?text=Image+1",
     dataId: 1,
     alt: "Image 1",
   },
   {
-    src: "./assets/art_work/img_2.jpg",
+    src: "https://via.placeholder.com/150?text=Image+2",
     dataId: 2,
     alt: "Image 2",
   },
   {
-    src: "./assets/art_work/img_3.jpg",
+    src: "https://via.placeholder.com/150?text=Image+3",
     dataId: 3,
     alt: "Image 3",
   },
   {
-    src: "./assets/art_work/img_4.jpg",
+    src: "https://via.placeholder.com/150?text=Image+4",
     dataId: 4,
     alt: "Image 4",
   },
   {
-    src: "./assets/art_work/img_5.jpg",
+    src: "https://via.placeholder.com/150?text=Image+5",
     dataId: 5,
     alt: "Image 5",
   },
   {
-    src: "./assets/art_work/img_6.jpg",
+    src: "https://via.placeholder.com/150?text=Image+6",
     dataId: 6,
     alt: "Image 6",
   },
   {
-    src: "./assets/art_work/img_7.jpg",
+    src: "https://via.placeholder.com/150?text=Image+7",
     dataId: 7,
     alt: "Image 7",
   },
   {
-    src: "./assets/art_work/img_8.jpg",
+    src: "https://via.placeholder.com/150?text=Image+8",
     dataId: 8,
     alt: "Image 8",
   },
   {
-    src: "./assets/art_work/img_9.jpg",
+    src: "https://via.placeholder.com/150?text=Image+9",
     dataId: 9,
     alt: "Image 9",
   },
   {
-    src: "./assets/art_work/img_10.jpg",
+    src: "https://via.placeholder.com/150?text=Image+10",
     dataId: 10,
     alt: "Image 10",
   },
   {
-    src: "./assets/art_work/img_11.jpg",
+    src: "https://via.placeholder.com/150?text=Image+11",
     dataId: 11,
     alt: "Image 11",
   },
   {
-    src: "./assets/art_work/img_12.jpg",
+    src: "https://via.placeholder.com/150?text=Image+12",
     dataId: 12,
     alt: "Image 12",
   },
