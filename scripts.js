@@ -142,13 +142,13 @@ window.addEventListener("scroll", () => {
   }
 });
 
-const top_link = document.querySelector(".up_arrow");
-if (top_link) {
-  window.addEventListener("scroll", () => {
-    if (window.pageYOffset < 5) {
-      top_link.classList.add("top_link_hide");
-    } else {
-      top_link.classList.remove("top_link_hide");
-    }
-  });
-}
+// const top_link = document.querySelector(".up_arrow");
+// if (top_link) {
+//   window.addEventListener("scroll", () => {
+//     if (window.pageYOffset < 5) {
+//       top_link.classList.add("top_link_hide");
+//     } else {
+//       top_link.classList.remove("top_link_hide");
+//     }
+//   });
+// }
