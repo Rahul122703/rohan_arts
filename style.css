@@ -86,7 +86,7 @@ a {
 }
 
 .first_section {
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 25px;
   overflow: hidden;
   font-family: newFont;
@@ -317,7 +317,7 @@ a {
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
   color: #fff; /* White text for contrast */
-  border: 2px solid black;
+  /* border: 2px solid black; */
   border-radius: 25px;
   overflow: hidden;
 }
@@ -831,7 +831,7 @@ strong {
   background: #0095f6;
   border: none;
   color: white;
-  padding: 5px 20px;
+  padding: 5px 15px;
   margin: 5px 0;
   border-radius: 4px;
   font-size: 0.9em;

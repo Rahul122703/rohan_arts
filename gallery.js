@@ -146,6 +146,7 @@ class ImageGallery {
     }
   }
 }
-if (getElement(".phone_gallery")) {
-  const nature = new ImageGallery(getElement(".phone_gallery"));
+const phone_gallery_element = getElement(".phone_gallery");
+if (phone_gallery_element) {
+  const phone_gallery = new ImageGallery(phone_gallery_element);
 }
