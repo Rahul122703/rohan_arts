@@ -36,7 +36,7 @@ const images = [
     alt: "Image 4",
   },
   {
-    src: "./assets/art_work/img_5.jpg",
+    src: "./assets/art_work/img_5.png",
     dataId: 5,
     alt: "Image 5",
   },
