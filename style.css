@@ -86,7 +86,7 @@ a {
 }
 
 .first_section {
-  /* border: 2px solid black; */
+  border: 2px solid black;
   border-radius: 25px;
   overflow: hidden;
   font-family: newFont;
@@ -317,7 +317,7 @@ a {
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
   color: #fff; /* White text for contrast */
-  /* border: 2px solid black; */
+  border: 2px solid black;
   border-radius: 25px;
   overflow: hidden;
 }
@@ -655,8 +655,12 @@ ul:is(:hover, :focus-within) img {
 
 /* social section */
 
+.social{
+margin-bottom: 2rem;
+}
+
 .profile-container {
-  width: 100vw;
+  width: 75vw;
   background: #f0f0f0;
   border: 1px solid #dbdbdb;
   border-radius: 10px;
@@ -792,7 +796,7 @@ strong {
 
 /* Overall container */
 .profile-container-phone {
-  width: 350px;
+  /* width: 350px; */
   background: #fff;
   border: 1px solid #dbdbdb;
   border-radius: 8px;
@@ -912,6 +916,8 @@ strong {
   justify-content: center;
   align-items: center;
   margin-top: 2rem;
+  border: 2px solid black;
+  border-radius: 25px;
 }
 .social_heading{
   font-family: newFont;
