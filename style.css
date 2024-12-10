@@ -3,11 +3,6 @@
   src: url("./PermanentMarker-Regular.ttf");
 }
 
-@font-face {
-font-family: 'Instagram Sans Light';
-src: url('/assets/fonts/Instagram_Sans_Light.woff') format('woff');
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -76,20 +71,27 @@ a {
   object-fit: cover;
 }
 
-.up_arrow {
-  height: 20px;
-}
-#image_arrow_up {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
 .first_section {
   border: 2px solid black;
   border-radius: 25px;
   overflow: hidden;
   font-family: newFont;
+}
+.up_button {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  position: fixed;
+  top: 91%;
+  left: 84%;
+  z-index: 100;
+}
+.whatsapp_button {
+  width: 4rem;
+  aspect-ratio: 1/1;
+  position: fixed;
+  top: 90%;
+  left: 1%;
+  z-index: 100;
 }
 .top_link_hide {
   display: none;
@@ -97,7 +99,7 @@ a {
 
 /* Sidebar */
 .sidebar {
-  height: 100vh;
+  height: 80vh;
   width: 400px; /* Responsive width for larger screens */
   max-width: 300px; /* Prevents it from being too wide */
   background: rgba(0, 0, 0, 0.1); /* Subtle dark frosted effect */
@@ -107,13 +109,14 @@ a {
   border-radius: 0 15px 15px 0;
   border: 1px solid rgba(255, 255, 255, 0.1);
   position: fixed;
-  top: 0;
+  top: 50vh;
   left: -100vw; /* Initially hidden */
   transition: all 0.4s ease-in-out;
-  z-index: 1000;
+  z-index: 999;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translate(0%, -50%);
 }
 
 .user_top {
@@ -134,7 +137,7 @@ a {
 .user_top h2 {
   margin: 0;
   font-size: 20px;
-  color: #fff;
+  color: #000000;
   font-weight: 600;
   text-align: center;
 }
@@ -158,7 +161,7 @@ a {
   display: block;
   padding: 15px 60px;
   text-decoration: none;
-  color: #ffffff;
+  color: #000000;
   font-size: 18px;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -178,7 +181,7 @@ a {
   margin-bottom: 20px;
   padding: 10px 25px;
   background: rgba(255, 255, 255, 0.1); /* Matches sidebar background */
-  color: #ffffff;
+  color: #000000;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
   font-size: 1.5rem;
@@ -186,12 +189,20 @@ a {
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: 80%;
+  font-family: newFont;
 }
 
 .donate-button:hover {
   transform: scale(1.1);
   background: rgba(255, 255, 255, 0.2); /* Slightly brighter hover effect */
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Subtle glow effect */
+}
+
+.coffee_icon {
+  height: 30%;
+  width: 30%;
+  object-fit: contain;
 }
 
 /* Sidebar Close Button */
@@ -204,7 +215,7 @@ a {
   font-size: 30px;
   border: none;
   cursor: pointer;
-  z-index: 2000;
+  z-index: 999;
   transition: transform 0.3s ease;
 }
 
@@ -229,7 +240,7 @@ a {
   -webkit-backdrop-filter: blur(8px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
-  z-index: 400;
+  z-index: 999;
 }
 
 .toggle-btn:hover {
@@ -305,6 +316,66 @@ a {
 
 /* GALLERY SECTION 123*/
 
+.pc_modal {
+  position: fixed;
+  top: -67%;
+  left: 0;
+  width: 90vh;
+  height: 85vh;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.pc_modal_image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: fill;
+}
+
+.image_cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.2s ease;
+}
+
+.image_cross img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure the cross icon looks good */
+}
+
+.image_cross:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
+}
+
+.image_modal_container {
+  max-width: 80%;
+  max-height: 80%;
+  overflow: hidden; /* Prevent the image from overflowing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image_modal_container img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px; /* Optional: rounded corners for the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for aesthetics */
+}
+
 .gallery_container {
   font-family: newFont;
   position: relative; /* Establishes a positioning context for pseudo-elements */
@@ -361,6 +432,7 @@ a {
   padding: 0;
   margin: 0;
   list-style-type: none;
+  border-radius: 25px;
 }
 
 .result {
@@ -655,8 +727,8 @@ ul:is(:hover, :focus-within) img {
 
 /* social section */
 
-.social{
-margin-bottom: 2rem;
+.social {
+  margin-bottom: 2rem;
 }
 
 .profile-container {
@@ -670,24 +742,23 @@ margin-bottom: 2rem;
 /* Profile Header */
 .profile-header-pc {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
-  border: 1px solid #e0e0e0; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #ffffff;
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px; 
+  padding: 20px 10px;
   max-width: 650px;
-  margin: 20px auto; 
+  margin: 20px auto;
   font-family: "Helvetica Neue", "Roboto", Arial, sans-serif;
   border-radius: 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-
 .profile-header-pc:hover {
-  transform: translateY(-5px); 
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
-  border-color: #d6d6d6; 
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  border-color: #d6d6d6;
 }
 
 .profile-pic {
@@ -751,8 +822,8 @@ strong {
   border: none;
 }
 
-.message-btn-pc{
-  background:#dadada;
+.message-btn-pc {
+  background: #dadada;
   padding: 5px 10px;
   font-size: 14px;
   border: 1px solid #dbdbdb;
@@ -823,7 +894,6 @@ strong {
   margin-right: 15px;
   border: 2px solid #dbdbdb;
 }
-
 
 .username {
   margin: 0;
@@ -900,7 +970,7 @@ strong {
   font-size: 0.9em;
   color: #8e8e8e;
   border-top: 0.5px solid rgb(180, 180, 180);
-  padding: 10px 0 0 0; 
+  padding: 10px 0 0 0;
 }
 
 .stats-posts,
@@ -909,8 +979,7 @@ strong {
   text-align: center;
 }
 
-.social { 
-  font-family: 'Instagram Sans Light';
+.social {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -919,7 +988,7 @@ strong {
   border: 2px solid black;
   border-radius: 25px;
 }
-.social_heading{
+.social_heading {
   font-family: newFont;
   font-size: 2rem;
   text-align: center;
@@ -930,7 +999,7 @@ strong {
 .social_pc {
   display: block;
 }
-.profile-container-phone{
+.profile-container-phone {
   display: none;
 }
 
@@ -941,18 +1010,18 @@ strong {
   .social_phone {
     display: block;
   }
-  .profile-container-phone{
+  .profile-container-phone {
     display: block;
   }
-  .profile-container,.bio a{
+  .profile-container,
+  .bio a {
     display: none;
   }
 }
 
-
-/* services */ 
+/* services */
 /* 111 */
-.service{
+.service {
   border: 2px solid black;
   border-radius: 25px;
   font-family: newFont;
@@ -965,7 +1034,7 @@ strong {
   align-content: center;
 }
 
-.heading{
+.heading {
   font-size: 2rem;
   text-align: center;
 }
@@ -984,7 +1053,7 @@ strong {
 
 .card {
   background: #ffffff;
-  border: 0.1px solid  grey;
+  border: 0.1px solid grey;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -1013,7 +1082,6 @@ strong {
   object-fit: contain;
 }
 
-
 .card_title {
   font-size: 1.5rem;
   color: #333;
@@ -1026,35 +1094,36 @@ strong {
   line-height: 1.5;
 }
 
-.button_container {
-    text_align: center;
-}
-
-.more_button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: transparent;
-  /* Transparent background */
-  color: #000000;
-  border: 2px solid #000000;
-  border-radius: 1rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-
-.more_button:hover {
-  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
-  transform: scale(1.05);
-}
-
-.more_button:focus {
-  outline: none;
-}
-
 @media (min-width: 768px) {
   .card_container {
-      grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.email_button {
+  font-family: newFont, Arial, sans-serif; /* Fallback font added */
+  text-align: center;
+  display: block; /* Ensures it centers properly */
+  margin: 20px auto; /* Combined margins */
+  padding: 10px 20px; /* Added padding for better button spacing */
+  border: 1px solid #ccc; /* Softer border color */
+  border-radius: 25px;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+  background-color: #f9f9f9; /* Light background color for a minimal look */
+  color: #333; /* Text color */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a real effect */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  cursor: pointer; /* Pointer cursor to indicate it's clickable */
+  margin: 0 auto;
+  margin-bottom: 20px;
+  max-width: 1280px;
+}
+
+.email_button:hover {
+  background-color: #fff; /* Slightly brighter background on hover */
+  color: #0078d7; /* Accent color for hover text */
+  border-color: #0078d7; /* Match hover border to text */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Slightly larger shadow */
+  transform: translateY(-2px); /* Small lift effect */
 }

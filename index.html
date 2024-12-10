@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header class="first_section" id="home">
+    <section class="first_section" id="home">
         <!-- Video Background -->
         <div class="video_container">
 
@@ -28,19 +28,20 @@
             </div>
             <nav>
                 <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#store">Store</a></li>
-                    <li><a href="#blogs">Services</a></li>
+                    <li><a href="#services">Services</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#contact">Contact Me</a></li>
                 </ul>
             </nav>
-            <button class="donate-button">Donate Me</button>
+            <button class="donate-button">buy me cup of coffee ☕</button> <!--1234 -->
         </aside>
 
         <!-- Sidebar Toggle Button (>) -->
         <button class="toggle-btn" id="toggleSidebar">
-            <img src="./assets/icons/side_bar.png" class="sidebar_button" alt=">" style="width:2rem;">
+            <img src="./assets/icons/side_bar.png" class="sidebar_button" alt=">" style="width:2rem;filter:invert(1);">
         </button>
         <div class="overlay  ">
             <h1>Art That Speaks Beyond Words</h1>
@@ -51,16 +52,67 @@
                 <a href="#gallery" class="gallery-btn">View Gallery</a>
             </div>
         </div>
-
-    </header>
+        <img src="./assets/icons/up2.png" class="up_button">
+        <a href="https://wa.me/9769413588?text=Hello%Rohan" target="_blank">
+            <img src="./assets/icons/whatsapp.png" class="whatsapp_button" alt="">
+        </a>
+    </section>
 
     <!-- GALLERY123 -->
-    <div class="gallery_container  gc_pc">
-    </div>
-    <div class="gallery_container  gc_phone">
-    </div>
+    <section class="gallery_container  gc_pc">
+        <h1 class="section-title">My Signature Art Pieces</h1>
+        <ul class="results">
+            <li class="result">
+                <img src="./assets/art_work/img_1.jpg" data-id="1" alt="Image 1" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_2.jpg" data-id="2" alt="Image 2" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_3.jpg" data-id="3" alt="Image 3" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_4.jpg" data-id="4" alt="Image 4" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_5.png" data-id="5" alt="Image 5" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_6.jpg" data-id="6" alt="Image 6" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_7.jpg" data-id="7" alt="Image 7" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_8.jpg" data-id="8" alt="Image 8" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_9.jpg" data-id="9" alt="Image 9" height="500" class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_10.jpg" data-id="10" alt="Image 10" height="500"
+                    class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_11.jpg" data-id="11" alt="Image 11" height="500"
+                    class="pc_modal_image" />
+            </li>
+            <li class="result">
+                <img src="./assets/art_work/img_12.jpg" data-id="12" alt="Image 12" height="500"
+                    class="pc_modal_image" />
+            </li>
+        </ul>
+        <div class="pc_modal">
+            <div class="image_cross"><img src="./assets/icons/cross.png" class="cross_button_pc_modal' alt=" ❌"></div>
+            <div class="image_modal_container">
+                <img src="./assets/art_work/img_9.jpg" class="pc_modal_image" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="gallery_container  gc_phone">
+    </section>
 
-    <div class="service">
+    <section class="service" id='services'>
         <h1 class='heading'>SERVICES</h1>
         <div class="card_container">
             <!-- Card 1 -->
@@ -128,12 +180,10 @@
                 </p>
             </div>
         </div>
-        <div class="button_container">
-            <button class="more_button">More</button>
-        </div>
-    </div>
 
-    <div class="social">
+    </section>
+
+    <section class="social" id="contact">
         <h1 class="social_heading">LETS CONNECT ON INSTAGRAM 😉</h1>
         <a href="https://www.instagram.com/rohan__arts/" target="_blank" class='social_pc'>
             <div class="profile-container custom_font">
@@ -204,7 +254,13 @@
             </div>
         </a>
 
-    </div>
+    </section>
+    <section class="email_button">
+        <a
+            href="mailto:rohanmewatijob@gmail.com?subject=Inquiry&body=Hello, I would like to know more about your services.">
+            Click to mail me at rohanmewatijob@gmail
+        </a>
+    </section>
     <script src="scripts.js"></script>
     <script src="gallery.js"></script>
 </body>

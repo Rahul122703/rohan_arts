@@ -131,24 +131,54 @@ const ulElementHTML = `
     .join("")}
 </ul>`;
 
-gallery_container_pc.innerHTML += h1ElementHTML + ulElementHTML;
+// gallery_container_pc.innerHTML += h1ElementHTML + ulElementHTML;
 insertGallery();
 
 // REMOVE SCROLL MODAL 123
 const modal_container = document.querySelector(".modal_container");
 window.addEventListener("scroll", () => {
-  if (window.pageYOffset <= 200) {
+  if (window.pageYOffset <= 200 || window.pageYOffset > 1400) {
     modal_container.style.display = "none";
   }
 });
 
-// const top_link = document.querySelector(".up_arrow");
-// if (top_link) {
-//   window.addEventListener("scroll", () => {
-//     if (window.pageYOffset < 5) {
-//       top_link.classList.add("top_link_hide");
-//     } else {
-//       top_link.classList.remove("top_link_hide");
-//     }
-//   });
-// }
+const top_link = document.querySelector(".up_button");
+
+top_link.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+if (top_link) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset < 5) {
+      top_link.classList.add("top_link_hide");
+    } else {
+      top_link.classList.remove("top_link_hide");
+    }
+  });
+}
+
+// MODAL LOGIC
+const pc_modal = document.querySelector(".pc_modal");
+const cross_button = document.querySelector(".image_cross");
+const pc_modal_image_container = document.querySelector(".results");
+const modal_image = document.querySelector(".image_modal_container");
+if (pc_modal) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset < 300 || window.pageYOffset > 1800) {
+      pc_modal.style.display = "none";
+    }
+  });
+}
+
+cross_button.addEventListener("click", () => {
+  pc_modal.style.display = "none";
+});
+
+pc_modal_image_container.addEventListener("click", (event) => {
+  const clickedElement = event.target;
+  if (clickedElement.tagName == "IMG") {
+    pc_modal.style.display = "flex";
+    modal_image.innerHTML = `<img src="${clickedElement.attributes.src.value}" class="${clickedElement.attributes.class.value}">`;
+  }
+});
