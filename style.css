@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 .custom_font {
@@ -71,15 +72,12 @@ a {
   object-fit: cover;
 }
 
-section {
-  scroll-behavior: smooth;
-}
-
 .first_section {
   border: 2px solid black;
   border-radius: 25px;
   overflow: hidden;
   font-family: newFont;
+  scroll-behavior: smooth;
 }
 .up_button {
   width: 4rem;
@@ -161,7 +159,10 @@ section {
   width: 100%;
 }
 
+
+
 .sidebar nav ul li a {
+  margin-top: 5px;
   display: block;
   padding: 15px 60px;
   text-decoration: none;
@@ -178,6 +179,7 @@ section {
   background: rgba(255, 255, 255, 0.15); /* Subtle hover background */
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Minimal shadow on hover */
+  border: 0.1px solid black;
 }
 
 .donate-button {
@@ -319,13 +321,19 @@ section {
 }
 
 /* GALLERY SECTION 123*/
+.pc_modal_image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: none;
+}
 
 .pc_modal {
   position: fixed;
   top: -67%;
   left: 0;
-  width: 90vh;
-  height: 85vh;
+  width: 60vw;
+  /* width: 100%; */
+  height: 100%;
   background: rgba(255, 255, 255, 0.15);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(5.5px);
@@ -338,11 +346,6 @@ section {
   z-index: 1000;
 }
 
-.pc_modal_image {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: fill;
-}
 
 .image_cross {
   position: absolute;
@@ -357,27 +360,26 @@ section {
 .image_cross img {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensure the cross icon looks good */
+  object-fit: contain; 
 }
 
 .image_cross:hover {
-  transform: scale(1.2); /* Slight zoom effect on hover */
+  transform: scale(1.2); 
 }
 
 .image_modal_container {
-  max-width: 80%;
-  max-height: 80%;
-  overflow: hidden; /* Prevent the image from overflowing */
+  /* border: 2px solid black; */
+  width: 70%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .image_modal_container img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 8px; /* Optional: rounded corners for the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow for aesthetics */
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
 .gallery_container {
@@ -990,9 +992,11 @@ strong {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 2rem;
   border: 2px solid black;
   border-radius: 25px;
+  margin:0 auto;
+  margin-top: 2rem;
+  max-width: 1500px;
 }
 .social_heading {
   font-family: newFont;
@@ -1038,6 +1042,9 @@ strong {
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin:0 auto;
+  margin-top: 2rem;
+  max-width: 1500px;;
 }
 
 .heading {
@@ -1124,6 +1131,7 @@ strong {
   margin: 0 auto;
   margin-bottom: 20px;
   max-width: 1280px;
+  margin-top: 20px;
 }
 
 .email_button:hover {
