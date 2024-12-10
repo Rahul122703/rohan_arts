@@ -71,6 +71,10 @@ a {
   object-fit: cover;
 }
 
+section {
+  scroll-behavior: smooth;
+}
+
 .first_section {
   border: 2px solid black;
   border-radius: 25px;
@@ -384,6 +388,7 @@ a {
   display: grid;
   place-items: center;
   height: 100vh;
+  background-image: url('./assets/bg/home_gallery.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Makes the background image fixed */
@@ -391,6 +396,7 @@ a {
   border: 2px solid black;
   border-radius: 25px;
   overflow: hidden;
+  background: rgb(230, 230, 230));
 }
 
 /* Overlay to Enhance Readability */
@@ -401,7 +407,7 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25); /* Semi-transparent overlay */
+
   backdrop-filter: blur(2px);
 
   z-index: 1;
