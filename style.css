@@ -1108,7 +1108,7 @@ strong {
   padding: 10px 20px; /* Added padding for better button spacing */
   border: 1px solid #ccc; /* Softer border color */
   border-radius: 25px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-transform: lowercase;
   background-color: #f9f9f9; /* Light background color for a minimal look */
   color: #333; /* Text color */
