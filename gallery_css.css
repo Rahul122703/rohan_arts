@@ -145,25 +145,30 @@ body {
   transform: translateX(-50%);
   background-color: transparent;
   display: flex;
-  justify-content: flex-start;
-  justify-content: center;
+  justify-content: center; /* Align items to the start for overflow */
   align-items: center;
   padding: 10px 20px;
   border-bottom: 2px solid #ddd;
   z-index: 10;
-  overflow-x: auto; /* Allows horizontal scrolling when buttons overflow */
+  overflow-x: auto; /* Horizontal scrolling */
   -webkit-overflow-scrolling: touch; /* Smooth scrolling on mobile */
   margin: 0 auto;
-  max-width: 1300px;
+  width: 100%; /* Ensure full width on mobile */
+  max-width: none; /* Allow the bar to be full width */
 }
 
-/* Hide the scrollbar */
+.filter-btn {
+  margin-right: 10px;
+  white-space: nowrap; /* Prevent button text from wrapping */
+}
+
+/* Hide the scrollbar but still allow scrolling */
 .filter-bar::-webkit-scrollbar {
-  display: none; /* Hides the scrollbar in Webkit browsers (Chrome, Safari) */
+  display: none;
 }
 
 .filter-bar {
-  scrollbar-width: none; /* Hides scrollbar in Firefox */
+  scrollbar-width: none; /* Hide the scrollbar for Firefox */
 }
 
 /* Styling the Filter Buttons */
@@ -195,21 +200,6 @@ body {
 }
 
 /* Responsive: Handling overflow on smaller screens */
-@media (max-width: 768px) {
-  .filter-bar {
-    flex-wrap: nowrap;
-  }
-
-  .filter-btn {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-  .toggle-btn-gallery {
-    top: 90vh;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
 
 /* search123 */
 .search-container {
@@ -294,7 +284,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   background: rgba(233, 233, 233, 0.6); /* Semi-transparent dark background */
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   backdrop-filter: blur(15px); /* Glassmorphism effect */
   color: black;
@@ -369,14 +359,31 @@ body {
     padding: 30px;
     width: 98%;
     height: 98%;
-    /* max-width: 600px; */
     text-align: center;
   }
+  .filter-bar {
+    display: flex;
+    justify-items: center;
+    justify-content: flex-start;
+    max-width: none;
+    flex-wrap: nowrap;
+  }
+
   .modal-image {
     width: 100%;
     height: 75%;
     border-radius: 15px;
     margin-bottom: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .filter-btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+  .toggle-btn-gallery {
+    top: 90vh;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
