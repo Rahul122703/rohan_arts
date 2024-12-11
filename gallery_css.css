@@ -483,3 +483,6 @@ body {
 .instagram_button:active {
   transform: scale(1.03);
 }
+.modal-content p {
+  color: black;
+}

@@ -111,3 +111,6 @@ body {
 .call-to-action a:hover {
   background: #45a049;
 }
+.modal-content p {
+  color: black;
+}

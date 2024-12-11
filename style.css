@@ -1220,6 +1220,10 @@ strong {
   color: #1976d2;
 }
 
+.modal-content p {
+  color: black;
+}
+
 @media (max-width: 768px) {
   .modal-content {
     padding: 30px;
