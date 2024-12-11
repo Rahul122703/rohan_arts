@@ -53,7 +53,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_1.jpg",
     text: "The Joker",
     insta_link: "https://www.instagram.com/p/C4x2xMwvrOd/",
-    category: "pantings",
+    category: "paintings",
     css_class: "wide",
   },
   {
@@ -120,14 +120,7 @@ const image_data = [
     category: "color portraits",
     css_class: "undefined",
   },
-  {
-    id: 10,
-    src: "./assets/insta_content/images/art_10.jpg",
-    text: "Art vs artist",
-    insta_link: "https://www.instagram.com/p/Ct820JFgssY/",
-    category: "color portraits",
-    css_class: "wide",
-  },
+
   {
     id: 11,
     src: "./assets/insta_content/images/art_11.jpg",
@@ -181,7 +174,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_17.jpg",
     text: "DEADPOOL",
     insta_link: "https://www.instagram.com/p/CyQPPP8PKhR/",
-    category: "pantings",
+    category: "paintings",
     css_class: "undefined",
   },
   {
@@ -189,7 +182,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_18.jpg",
     text: "🙏SIYA RAM🙏",
     insta_link: "https://www.instagram.com/p/C2ZI5xctHB0/",
-    category: "drawings",
+    category: "paintings",
     css_class: "big",
   },
   {
@@ -205,7 +198,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_20.jpg",
     text: "idk",
     insta_link: "https://www.instagram.com/p/C4x2xMwvrOd/",
-    category: "pantings",
+    category: "pencil portraits",
     css_class: "wide",
   },
   {
@@ -231,14 +224,6 @@ const image_data = [
     insta_link: "https://www.instagram.com/p/CmG0Yq3Pml9/",
     category: "pencil portraits",
     css_class: "undefined",
-  },
-  {
-    id: 24,
-    src: "./assets/insta_content/images/art_24.jpg",
-    text: "idk",
-    insta_link: "  ",
-    category: "drawings",
-    css_class: "big",
   },
   {
     id: 25,
@@ -285,7 +270,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_30.jpg",
     text: "Spiderman",
     insta_link: "https://www.instagram.com/p/Bq2M9zGBDRH/",
-    category: "pantings",
+    category: "paintings",
     css_class: "big",
   },
   {
@@ -453,7 +438,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_51.jpg",
     text: "Hacker",
     insta_link: "https://www.instagram.com/p/B9rnZ_nhIw3/",
-    category: "drawings",
+    category: "paintings",
     css_class: "tall",
   },
   {
@@ -613,7 +598,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_71.jpg",
     text: "Wall panting",
     insta_link: "https://www.instagram.com/p/CbzhLE7PDKO/",
-    category: "pantings",
+    category: "paintings",
     css_class: "tall",
   },
   {
@@ -621,7 +606,7 @@ const image_data = [
     src: "./assets/insta_content/images/art_72.jpg",
     text: "Spiderman",
     insta_link: "https://www.instagram.com/p/Cb9dwZ7tvgw/",
-    category: "pantings",
+    category: "paintings",
     css_class: "none",
   },
   {

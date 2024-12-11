@@ -279,7 +279,7 @@ body {
   display: none; /* Initially hidden */
   position: fixed;
   width: 100vw;
-  height: 100v;
+  height: 100;
   top: -0;
   left: 50%;
   transform: translateX(-50%);
