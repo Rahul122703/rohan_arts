@@ -351,7 +351,7 @@ body {
 }
 
 .close-btn:hover {
-  color: #1976d2; /* Blue color on hover */
+  color: #1976d2;
 }
 
 @media (max-width: 768px) {
@@ -386,4 +386,100 @@ body {
     left: 50%;
     transform: translateX(-50%);
   }
+}
+
+.no-product {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: red; /* Red text color */
+  background: transparent;
+  padding: 15px 30px;
+  border: 2px solid red; /* Red border */
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.no-product::before {
+  content: "🚫";
+  margin-right: 10px;
+  font-size: 1.7rem;
+}
+
+.no-product:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* insta button */
+.instagram_button {
+  position: relative;
+  width: 130px;
+  height: 35px;
+  border-radius: 30px;
+  background-color: white;
+  border: 1px #ffb700 solid;
+  overflow: hidden;
+}
+
+.text1 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 22%;
+}
+
+.text2 {
+  position: absolute;
+  top: 25%;
+  left: -50px;
+  font-weight: 700;
+  font-size: 14px;
+  color: white;
+}
+
+.icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.5s;
+}
+
+.icon::before {
+  position: absolute;
+  left: -100px;
+  top: 0;
+  z-index: -1;
+  content: "";
+  width: 130px;
+  height: 33px;
+  border-radius: 30px;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.instagram_button:hover .icon {
+  transform: translateX(96px);
+  transition: transform 0.5s;
+}
+
+.instagram_button:hover .text2 {
+  transform: translateX(100px);
+  transition: transform 0.6s;
+}
+
+.instagram_button:active {
+  transform: scale(1.03);
 }
