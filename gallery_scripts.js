@@ -43,7 +43,7 @@ window.onload = () => {
     setTimeout(() => {
       popup.style.display = "none";
     }, 500);
-  }, 2000);
+  }, 4000);
 };
 
 // filter logic
@@ -848,4 +848,14 @@ modal.addEventListener("click", (event) => {
   if (event.target.classList.contains("close-btn")) {
     modal.style.display = "none";
   }
+});
+
+const money_modal = document.querySelector("#money_modal");
+const money_button = document.querySelector(".donate-button");
+const close_button = document.querySelector("#money-close-btn");
+money_button.addEventListener("click", () => {
+  money_modal.style.display = "flex";
+});
+close_button.addEventListener("click", () => {
+  money_modal.style.display = "none";
 });

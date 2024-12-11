@@ -1,7 +1,8 @@
 pencil portraits
-color port
+color portraits
 anime
 drawings
+paintings
 
 insta_link: "  ", category: " " 
 

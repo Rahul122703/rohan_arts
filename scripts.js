@@ -110,8 +110,9 @@ function insertGallery() {
         </div>
       </div>
     </section>`;
-
-  gallery_container_phone.innerHTML += phoneGalleryHTML;
+  if (gallery_container_phone) {
+    gallery_container_phone.innerHTML += phoneGalleryHTML;
+  }
 }
 const h1ElementHTML = `<h1 class="section-title">My Signature Art Pieces</h1>`;
 const ulElementHTML = `
@@ -136,12 +137,13 @@ insertGallery();
 
 // REMOVE SCROLL MODAL 123
 const modal_container = document.querySelector(".modal_container");
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset <= 200 || window.pageYOffset > 1400) {
-    modal_container.style.display = "none";
-  }
-});
-
+if (modal_container) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset <= 200 || window.pageYOffset > 1400) {
+      modal_container.style.display = "none";
+    }
+  });
+}
 const top_link = document.querySelector(".up_button");
 
 top_link.addEventListener("click", () => {
@@ -170,15 +172,28 @@ if (pc_modal) {
     }
   });
 }
+if (cross_button) {
+  cross_button.addEventListener("click", () => {
+    pc_modal.style.display = "none";
+  });
+}
 
-cross_button.addEventListener("click", () => {
-  pc_modal.style.display = "none";
+if (pc_modal_image_container) {
+  pc_modal_image_container.addEventListener("click", (event) => {
+    const clickedElement = event.target;
+    if (clickedElement.tagName == "IMG") {
+      pc_modal.style.display = "flex";
+      modal_image.innerHTML = `<img src="${clickedElement.attributes.src.value}" class="${clickedElement.attributes.class.value}">`;
+    }
+  });
+}
+
+const modal = document.querySelector("#modal");
+const money_button = document.querySelector(".donate-button");
+const close_button = document.querySelector("#close-btn");
+money_button.addEventListener("click", () => {
+  modal.style.display = "flex";
 });
-
-pc_modal_image_container.addEventListener("click", (event) => {
-  const clickedElement = event.target;
-  if (clickedElement.tagName == "IMG") {
-    pc_modal.style.display = "flex";
-    modal_image.innerHTML = `<img src="${clickedElement.attributes.src.value}" class="${clickedElement.attributes.class.value}">`;
-  }
+close_button.addEventListener("click", () => {
+  modal.style.display = "none";
 });
