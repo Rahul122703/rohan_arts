@@ -12,6 +12,22 @@ closeBtn.addEventListener("click", () => {
   toggleBtn.style.display = "block";
 });
 
+const top_link = document.querySelector(".up_button");
+
+top_link.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+if (top_link) {
+  window.addEventListener("scroll", () => {
+    if (window.pageYOffset < 5) {
+      top_link.classList.add("top_link_hide");
+    } else {
+      top_link.classList.remove("top_link_hide");
+    }
+  });
+}
+
 const image_data = [
   {
     src: "./assets/insta_content/images/art_1.jpg",
