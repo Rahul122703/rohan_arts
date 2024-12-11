@@ -13,7 +13,11 @@
     <link rel="stylesheet" href="gallery_css.css">
 </head>
 
+
 <body>
+    <div class="popup" id="popup">
+        Double click to open image
+    </div>
     <aside class="sidebar" id="sidebar">
         <button class="close-btn" id="closeBtn">×</button>
         <div class="user_top">
@@ -24,27 +28,46 @@
             <ul>
                 <li><a href="./index.html">Home</a></li>
                 <li><a href="./gallery.html">Gallery</a></li>
-                <li><a href="#services">Services</a></li>
+                <li><a href="./index.html">Services</a></li>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="./index.html">Contact Me</a></li>
             </ul>
         </nav>
         <button class="donate-button">buy me cup of coffee ☕</button> <!--1234 -->
     </aside>
 
+
+    <div class="search-container">
+        <input type="text" class="search-input" placeholder="Search...">
+    </div>
     <!-- Sidebar Toggle Button (>) -->
-    <button class="toggle-btn" id="toggleSidebar">
+    <button class="toggle-btn-gallery" id="toggleSidebar">
         <img src="./assets/icons/side_bar.png" class="sidebar_button" alt=">" style="width:2rem;filter:invert(1);">
     </button>
+
     <img src="./assets/icons/up2.png" class="up_button">
     <a href="https://wa.me/9769413588?text=Hello%Rohan" target="_blank">
         <img src="./assets/icons/whatsapp.png" class="whatsapp_button" alt="">
     </a>
 
+    <div class="filter-bar">
+        <button class="filter-btn">All</button>
+        <!-- <button class="filter-btn">Pencil Portraits</button>
+        <button class="filter-btn">Color Portraits</button>
+        <button class="filter-btn">Anime</button>
+        <button class="filter-btn">Drawings</button> -->
+    </div>
     <div class="gallery">
 
     </div>
-
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="close-btn">&#10006;</button>
+            <img src="https://via.placeholder.com/600" alt="Image" class="modal-image">
+            <p class="modal-text">This is a glassmorphic modal with some text!</p>
+            <button class="modal-btn">Click Me</button>
+        </div>
+    </div>
 
     <script src="gallery_scripts.js"></script>
 
