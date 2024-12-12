@@ -278,18 +278,20 @@ body {
 .modal {
   display: none; /* Initially hidden */
   position: fixed;
-  width: 100vw;
+  width: 65%;
   height: 100;
-  top: -0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   background: rgba(233, 233, 233, 0.6); /* Semi-transparent dark background */
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   backdrop-filter: blur(15px); /* Glassmorphism effect */
   color: black;
   z-index: 1001;
-  /* border: 2px solid black; */
+  padding: 1rem 0 1rem 0;
+  border-radius: 25px;
+  border: 1px solid black;
 }
 
 .modal-content {
@@ -344,7 +346,7 @@ body {
   right: 10px;
   background: transparent;
   border: none;
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -385,6 +387,16 @@ body {
     top: 90vh;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  .modal {
+    width: 90%;
+    top: 50%;
+    left: 50%;
+
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
   }
 }
 
