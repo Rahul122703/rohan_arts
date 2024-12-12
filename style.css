@@ -611,7 +611,7 @@ ul:is(:hover, :focus-within) img {
 }
 
 /* Modal */
-.modal {
+.modal_phone {
   margin: 4rem auto;
   background: linear-gradient(
     to bottom right,

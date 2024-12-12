@@ -95,7 +95,7 @@ function insertGallery() {
         )
         .join("")}
       <div class="modal_container">
-        <div class="modal">
+        <div class="modal_phone">
           <div class="top_container">
             <div class="centerer">
               <div class="modal_button cross">&#x2716;</div>

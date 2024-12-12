@@ -49,6 +49,7 @@ class ImageGallery {
   }
   openImage(image) {
     //123
+    console.log("here");
     this.modal.style.display = "block";
     this.setImage(image);
     const modal_images = this.all_images
