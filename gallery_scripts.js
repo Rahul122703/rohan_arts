@@ -795,22 +795,22 @@ function getAllButtons() {
 }
 
 const search_input = document.querySelector(".search-input");
-search_input.addEventListener("keydown", function () {
-  const filtered_products = image_data.filter(function (currentItem) {
-    if (
-      currentItem.text
-        .toLocaleLowerCase()
+
+search_input.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    // Check if the Enter key was pressed
+    const filtered_products = image_data.filter(function (currentItem) {
+      return currentItem.text
+        .toLowerCase()
         .trim()
-        .includes(search_input.value.toLowerCase().trim())
-    ) {
-      return currentItem;
+        .includes(search_input.value.toLowerCase().trim());
+    });
+
+    if (filtered_products.length > 0) {
+      getItems(filtered_products);
     } else {
-      getItems(image_data);
+      image_container.innerHTML = `<span class="no-product">No art with this name was found</span>`;
     }
-  });
-  getItems(filtered_products);
-  if (filtered_products.length === 0) {
-    image_container.innerHTML = `<span class="no-product">No art with this name was found</span>`;
   }
 });
 
