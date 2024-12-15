@@ -1241,7 +1241,6 @@ strong {
   }
 
   .toggle-btn-gallery {
-    top: 90vh;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -1346,7 +1345,6 @@ strong {
   }
 
   .toggle-btn-gallery {
-    top: 90vh;
     left: 50%;
     transform: translateX(-50%);
   }
