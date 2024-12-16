@@ -749,6 +749,7 @@ ul:is(:hover, :focus-within) img {
 .profile-header-pc {
   font-family: "Roboto", "Helvetica Neue", Arial, sans-serif;
   border: 1px solid #e0e0e0;
+  /* border: 1px solid black; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: #ffffff;
   display: flex;
@@ -793,8 +794,9 @@ ul:is(:hover, :focus-within) img {
 /* here */
 
 .profile-info {
+  /* border: 2px solid black; */
   /* flex: 1; */
-  margin-left: 10px;
+  margin-right: 3rem;
 }
 
 strong {
@@ -1002,6 +1004,7 @@ strong {
   text-align: center;
 }
 .social_phone {
+  text-decoration: none;
   display: none;
 }
 .social_pc {
