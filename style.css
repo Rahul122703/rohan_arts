@@ -140,7 +140,7 @@ a {
 .user_top h2 {
   margin: 0;
   font-size: 20px;
-  color: #000000;
+  color: #808080;
   font-weight: 600;
   text-align: center;
 }
@@ -165,7 +165,8 @@ a {
   display: block;
   padding: 15px 60px;
   text-decoration: none;
-  color: #000000;
+  /* color: #000000; */
+  color: #808080;
   font-size: 18px;
   font-weight: 500;
   transition: all 0.3s ease;
