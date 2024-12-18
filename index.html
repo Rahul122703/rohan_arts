@@ -17,8 +17,12 @@
 <body>
     <section class="first_section" id="home">
         <!-- Video Background -->
-        <div class="video_container">
-
+        <div class="video_container" style="position: relative; width: 100vw; height: 100vh; overflow: hidden;">
+            <video autoplay muted loop
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                <source src="./assets/bg/home.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
 
         <!-- Sidebar -->
@@ -45,7 +49,7 @@
         <button class="toggle-btn" id="toggleSidebar">
             <img src="./assets/icons/side_bar.png" class="sidebar_button" alt=">" style="width:2rem;filter:invert(1);">
         </button>
-        <div class="overlay  ">
+        <div class="overlay ">
             <h1>Art That Speaks Beyond Words</h1>
             <div class="subheading">Explore original sketches, paintings, and custom artwork crafted with passion
                 and
@@ -61,7 +65,7 @@
     </section>
 
     <!-- GALLERY123 -->
-    <section class="gallery_container  gc_pc">
+    <section class="gallery_container gc_pc">
         <h1 class="section-title">My Signature Art Pieces</h1>
         <ul class="results">
             <li class="result">
