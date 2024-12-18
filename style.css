@@ -217,7 +217,7 @@ a {
   top: 10px;
   right: 10px;
   background: transparent;
-  color: #ffffff;
+  color: #808080;
   font-size: 30px;
   border: none;
   cursor: pointer;
@@ -1214,7 +1214,7 @@ strong {
   right: 10px;
   background: transparent;
   border: none;
-  color: white;
+  color: #808080;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s ease;
@@ -1322,7 +1322,7 @@ strong {
   right: 10px;
   background: transparent;
   border: none;
-  color: rgb(0, 0, 0);
+  color: #808080;
   font-size: 24px;
   cursor: pointer;
   transition: color 0.3s ease;
